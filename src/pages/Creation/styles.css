@@ -1,0 +1,16 @@
+h1{
+        font-size: 3.5rem;
+      color: rgba(255, 255, 255, 0.61); 
+  }
+
+  .linha {
+    border: 1px solid #ff6000;
+    margin-left: 18%;
+    width: 64%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+
+

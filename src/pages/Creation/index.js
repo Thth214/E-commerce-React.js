@@ -11,7 +11,8 @@ function Criacao() {
                 <Menu />
 
             </div>
-            <div>Tela Criação</div>
+            <h1 >Tela Criação</h1>
+            <hr className= 'linha'/>
             <div>
                 <ProductForm />
             </div>
