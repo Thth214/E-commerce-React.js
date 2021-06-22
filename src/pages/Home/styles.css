@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.containerHome{
+    position: relative;
+     
+}
+
+.menuSuperior {
+    background-color: teal;
+    position: relative;
+}
+
+.botaoSair{
+    float: right;
+}
+
+h1{
+    text-align: center;
+}

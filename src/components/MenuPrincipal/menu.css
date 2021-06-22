@@ -1,0 +1,111 @@
+.menuSuperior {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #081c25;
+  height: 5rem;
+}
+
+.iconPrincipal {
+  margin-left: 1vw;
+  font-size: 2vw;
+  background: none;
+}
+
+.iconPrincipal:hover{
+  transform: scale(1.2);
+}
+
+.iconCart {
+  margin-left: 92vw;
+  margin-top: 5px;
+  font-size: 2.4vw;
+  background: none;
+}
+
+.iconCart:hover{
+  transform: scale(1.2);
+}
+
+.menuSecundario {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background-color: #081c25;
+  width: 13vw;
+  height: 100vh;
+  top: 0;
+  transition: 600ms;
+  left: -100%;
+  
+}
+
+.menuSecundario.active {
+  left: 0;
+  transition: 300ms;
+}
+
+
+.itensMenu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 1vh;
+  list-style: none;
+  height: 8vh;
+}
+
+.itensMenu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1.3vw;
+  width: 100%;
+  height: 95%;
+  padding: 0 1vw;
+  border-radius: 0.5rem;
+}
+
+.itensMenu a:hover {
+  background-color: #1a64b9;
+}
+
+.menuSecundario-items {
+  width: 100%;
+}
+
+.iconFechar {
+  margin-left: 1vw;
+  font-size: 2vw;
+  background: none;
+}
+
+.botaoFechar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #081c25;
+  width: 100%;
+  height: 4vw;
+}
+
+.iconFechar:hover{
+  transform: scale(1.2);
+}
+
+.nomePagina {
+  margin-left: 1vw;
+}
+
+@media screen and (max-width: 1147px) {
+  .menuSuperior {
+    height: 20%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .menuSuperior {
+    height: 25%;
+  }
+}

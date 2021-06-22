@@ -1,0 +1,29 @@
+.containerPedido {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60vw;
+    margin: 10vh 20vw;
+    background-color: teal;
+}
+
+.cardEsquerda{
+    background-color: rgb(191, 218, 218);
+    height: max-content;
+    width: max-content;
+    margin: 20px;
+    float: left;
+}
+
+.linhas {
+    display: flex;
+    list-style: none;
+}
+
+.card1{
+    font-size: 1.5vw;
+}
+.card2{
+    font-size: 1.5vw;
+    margin-right: 2vw;
+}

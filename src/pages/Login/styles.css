@@ -1,0 +1,50 @@
+.containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 20vw ;
+    flex-direction: column;
+    margin: 0 40vw;
+    margin-top: 28vh;
+    background-color: #081c25;
+    border-radius: 0.5rem;
+    box-shadow: 20px 20px 10px #002447;
+}   
+
+h1 {
+    font-size: 3vw ;
+    margin: 2vh;
+    color: white;
+}
+
+.input_Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputLogin{
+    height: 5vh;
+    width: 14vw;
+    margin-bottom: 1vw;
+    padding-left: 0.5vh;
+    border-radius: 8px;
+}
+
+.botaoLogin{
+    height: 4vh;
+    width: 8vw;
+    border-radius: 0.2vw;
+    background-color: #2b2eff;
+    margin: 2vh;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.botaoLogin:hover{
+    background-color: rgb(219, 218, 218);
+    transform: scale(0.95);
+}
