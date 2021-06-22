@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
+import './postForm.css'
 
 function ProductForm() {
 
@@ -56,20 +57,26 @@ function ProductForm() {
 
     return (
         <div className='containerForm'>
-            <div className='formProduto'>
-                <form onSubmit={(event) => handleSubmit(event)}>
-                    <input onChange={(event) => handleChange(event)} id='nome' value={product.nome} type='text' placeholder='nome'></input>
-                    <input onChange={(event) => handleChange(event)} id='descricao' value={product.descricao} type='text' placeholder='descricao'></input>
-                    <input onChange={(event) => handleChange(event)} id='preco' value={product.preco} type='text' placeholder='preco'></input>
-                    <input onChange={(event) => handleChange(event)} id='foto' value={product.foto} type='text' placeholder='foto'></input>
-                    <button>Criar produto</button>
+            <div className='divProduto' >
+                <form className='formProduto' onSubmit={(event) => handleSubmit(event)}>
+                    <h3 className='titulos'>Nome:</h3>
+                    <input onChange={(event) => handleChange(event)} id='nome' value={product.nome} type='text' placeholder='Nome'></input>
+                    <h3 className='titulos'>Descrição:</h3>
+                    <input onChange={(event) => handleChange(event)} id='descricao' value={product.descricao} type='text' placeholder='Descrição'></input>
+                    <h3 className='titulos'>Preço:</h3>
+                    <input onChange={(event) => handleChange(event)} id='preco' value={product.preco} type='text' placeholder='Preço'></input>
+                    <h3 className='titulos'>Foto:</h3>
+                    <input onChange={(event) => handleChange(event)} id='foto' value={product.foto} type='text' placeholder='Url da imagem'></input>
+                    <button className='criarProduto'>Criar produto</button>
                 </form>
             </div>
-            <div className='formCategoria'>
-                <form onSubmit={(event) => handleSubmit2(event)}>
+            <div className='divCategoria'>
+                <form className='formCategoria' onSubmit={(event) => handleSubmit2(event)}>
+                    <h3 className='titulos'>Nome:</h3>
                     <input onChange={(event) => handleChange2(event)} id='nome' value={category.nome} type='text' placeholder='nome'></input>
+                    <h3 className='titulos'>Descrição:</h3>
                     <input onChange={(event) => handleChange2(event)} id='descricao' value={category.descricao} type='text' placeholder='descricao'></input>
-                    <button>Criar categoria</button>
+                    <button className='criarCategoria'>Criar categoria</button>
                 </form>
             </div>
 
