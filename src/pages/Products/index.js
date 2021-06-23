@@ -2,14 +2,13 @@ import React, {useState} from 'react'
 import './styles.css'
 import { Link } from 'react-router-dom'
 import Menu from '../../components/MenuPrincipal/menu'
-import Card from '../../components/cardProduto'
 import products from "../../components/data";
 import ProductCard from "../../components/cardProduto";
 import ReactPaginate from "react-paginate";
 
 
 function Products() {
-    const [produtos, setProdutos] = useState(products.slice(0, 1000));
+    const [produtos, setProdutos] = useState(products);
     const [pageNumber, setPageNumber] = useState(0);
 
     const produtosPerPage = 18;

@@ -9,11 +9,10 @@ function Criacao() {
         <div>
             <div className='menuSuperior'>
                 <Menu />
-
             </div>
             <h1 >Tela Criação</h1>
             <hr className= 'linha'/>
-            <div>
+            <div >
                 <ProductForm />
             </div>
         </div>

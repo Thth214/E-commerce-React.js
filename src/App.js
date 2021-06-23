@@ -8,9 +8,12 @@ import Creation from './pages/Creation/index'
 import ProductsAdmin from './pages/ProductsAdmin/index'
 import CategoryAdmin from './pages/CategoryAdmin/index'
 import Carrinho from './pages/Carrinho/index'
+
 import './App.css'
 
 function App() {
+ 
+
   return (
     <BrowserRouter>
       <Switch>

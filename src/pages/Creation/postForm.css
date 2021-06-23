@@ -7,7 +7,7 @@
 
 .divProduto{
     background-color: #081c25;
-    height: 22rem;
+    height: 26rem;
     width: 25rem;
     margin-right: 10rem;
     padding-top: 1rem;
@@ -28,7 +28,7 @@
     display: block;
 }
 
-#nome, #descricao, #preco, #foto{
+#nome, #descricao, #valorUnitario, #qtd_estoque, #categoria{
     width: 25rem;
     height: 2rem;
     margin:0 0 1rem 0;
@@ -67,13 +67,13 @@
 }
 
 @media screen and (max-width: 1147px) {
-    .divProduto, .divCategoria,.criarProduto, .criarCategoria, #nome, #descricao, #preco, #foto {
+    .divProduto, .divCategoria,.criarProduto, .criarCategoria, #nome, #descricao, #valorUnitario, #qtd_estoque, #categoria {
       width: 100%;
     }
   }
   
   @media screen and (max-width: 700px) {
-    .divProduto,  .divCategoria,.criarProduto, .criarCategoria,#nome, #descricao, #preco, #foto   {
+    .divProduto,  .divCategoria,.criarProduto, .criarCategoria,#nome, #descricao, #valorUnitario, #qtd_estoque,#categoria   {
       width: 100%;
     }
   }
