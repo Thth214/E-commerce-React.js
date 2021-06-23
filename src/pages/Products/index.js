@@ -10,7 +10,7 @@ import Sidebar from '../../components/SidebarNight';
 
 
 function Products() {
-    const [produtos, setProdutos] = useState(products.slice(0, 1000));
+    const [produtos, setProdutos] = useState(products);
     const [pageNumber, setPageNumber] = useState(0);
 
     const produtosPerPage = 18;

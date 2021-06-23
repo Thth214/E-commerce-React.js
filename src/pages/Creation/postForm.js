@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
 
-import Axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import Axios from 'axios'
 import './postForm.css'
 
 
 function ProductForm() {
 
-    const url = 'https://trabalho-ecommerce.herokuapp.com/produtos'
-    const url2 = 'https://trabalho-ecommerce.herokuapp.com/categorias'
+    const url = '/produtos'
+    const url2 = '/categorias'
+
     const [product, setProduct] = useState({
         nome: '',
         descricao: '',
-        preco: '',
-        foto: ''
+        qtd_estoque: '',
+        valorUnitario:'',
+        categoria:{
+            id:''
+        }
     })
 
     const [category, setCategory] = useState({
@@ -20,23 +24,56 @@ function ProductForm() {
         descricao: ''
     })
 
-    function handleChange(event) {
+    const[categoria, setCategoria]= useState([])
+
+    function handleIdChange(event) {
+        event.preventDefault();
         const novoProd = { ...product }
-        novoProd[event.target.id] = event.target.value
+        novoProd.categoria.id = event.target.value
         setProduct(novoProd)
-        console.log(novoProd)
     }
 
-    function handleSubmit(event) {
-        Axios.post(url, {
-            nome: product.nome,
-            descricao: product.descricao,
-            preco: product.preco,
-            foto: product.foto
+    function handleNomeChange(event) {
+        event.preventDefault();
+        const novoProd = { ...product }
+        novoProd.nome = event.target.value
+        setProduct(novoProd)
+    }
+
+    function handleDescricaoChange(event) {
+        event.preventDefault();
+        const novoProd = { ...product }
+        novoProd.descricao = event.target.value
+        setProduct(novoProd)
+    
+    }
+
+    function handleEstoqueChange(event) {
+        event.preventDefault();
+        const novoProd = { ...product }
+        novoProd.qtd_estoque = event.target.value
+        setProduct(novoProd)
+        
+    }
+
+    function handlePrecoChange(event) {
+        event.preventDefault();
+        const novoProd = { ...product }
+        novoProd.valorUnitario = event.target.value
+        setProduct(novoProd)
+        
+    }
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        console.log(product)
+        await Axios.post(url, product, {
+            headers: {'Content-Type': 'application/json'}
         })
-            .then(rv => {
-                console.log(rv.product)
+            .then(response => {
+                console.log(response.product)
             })
+            
     }
 
     function handleChange2(event) {
@@ -47,29 +84,49 @@ function ProductForm() {
     }
 
     function handleSubmit2(event) {
-        Axios.post(url2, {
-            nome: category.nome,
-            descricao: category.descricao,
-
-        })
-            .then(rv => {
-                console.log(rv.category)
+        event.preventDefault();
+        Axios.post(url2, category)
+            .then(response => {
+                console.log(response.category)
+            })
+            .catch(error => {
+                console.log(error)
             })
     }
+
+    // useEffect(() => {
+    //     fetch(url2,
+    //         {
+    //             method: "GET",
+    //             headers: {
+    //                 'Content-type': 'application/json'
+    //             }
+    //         }).then(response => response.json()).then(response => setCategoria(response))
+    // })
 
     return (
         <div className='containerForm'>
             <div className='divProduto' >
                 <form className='formProduto' onSubmit={(event) => handleSubmit(event)}>
                     <h3 className='titulos'>Nome:</h3>
-                    <input onChange={(event) => handleChange(event)} id='nome' value={product.nome} type='text' placeholder='Nome'></input>
+                    <input onChange={(event) => handleNomeChange(event)} id='nome'  type='text' placeholder='Nome'></input>
                     <h3 className='titulos'>Descrição:</h3>
-                    <input onChange={(event) => handleChange(event)} id='descricao' value={product.descricao} type='text' placeholder='Descrição'></input>
+                    <input onChange={(event) => handleDescricaoChange(event)} id='descricao'  type='text' placeholder='Descrição'></input>
                     <h3 className='titulos'>Preço:</h3>
-                    <input onChange={(event) => handleChange(event)} id='preco' value={product.preco} type='text' placeholder='Preço'></input>
-                    <h3 className='titulos'>Foto:</h3>
-                    <input onChange={(event) => handleChange(event)} id='foto' value={product.foto} type='text' placeholder='Url da imagem'></input>
-                    <button className='criarProduto'>Criar produto</button>
+                    <input onChange={(event) => handlePrecoChange(event)} id='valorUnitario'  type='text' placeholder='Preço'></input>
+                    <h3 className='titulos'>Estoque:</h3>
+                    <input onChange={(event) => handleEstoqueChange(event)} id='qtd_estoque'  type='text' placeholder='Quantidade estoque'></input>
+                    <h3 className='titulos'>Categoria:</h3>
+                    <input onChange={(event) => handleIdChange(event)} id='categoria'   type='text' placeholder='Categoria'></input>
+                    {/* <select id='categorias'>
+                        {
+                            categoria.map(result=>{
+                                return(
+                        <option key={result.key} value={result.key}>{result.nome}</option>
+                            )})}
+                    </select> */}
+                    
+                    <button className='criarProduto' type='submit'>Criar produto</button>
                 </form>
             </div>
             <div className='divCategoria'>
@@ -78,11 +135,11 @@ function ProductForm() {
                     <input onChange={(event) => handleChange2(event)} id='nome' value={category.nome} type='text' placeholder='nome'></input>
                     <h3 className='titulos'>Descrição:</h3>
                     <input onChange={(event) => handleChange2(event)} id='descricao' value={category.descricao} type='text' placeholder='descricao'></input>
-                    <button className='criarCategoria'>Criar categoria</button>
+                    <button className='criarCategoria' type='submit'>Criar categoria</button>
                 </form>
             </div>
 
-        </div>
+        </div >
     )
 }
 

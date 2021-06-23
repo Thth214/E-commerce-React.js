@@ -19,7 +19,7 @@ function Criacao() {
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <h1 >Tela Criação</h1>
             <hr className= 'linha'/>
-            <div>
+            <div >
                 <ProductForm />
             </div>
         </div>
