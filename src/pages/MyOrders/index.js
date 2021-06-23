@@ -1,6 +1,7 @@
 import './styles.css'
 import { Link } from 'react-router-dom'
-import Menu from '../../components/MenuPrincipal/menu'
+import Navbar from '../../components/NavbarNight';
+import Sidebar from "../../components/SidebarNight";
 import ReactPaginate from "react-paginate";
 import React, { useState } from 'react'
 import Json from './data.json'
@@ -45,9 +46,16 @@ function MyOrders() {
         setPageNumber(selected);
     };
 
+const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
     return (
         <div>
-            <Menu />
+            <Navbar toggle={toggle} />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
             <div className="App">
 
                 <h1>Meus pedidos:</h1>

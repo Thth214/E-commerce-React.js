@@ -4,6 +4,8 @@ import "./cardProduto.css";
 import formatCurrency from "format-currency";
 import products from "./data";
 
+  
+
 
 const ProductCard = ({ product }) => {
   

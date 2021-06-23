@@ -1,18 +1,13 @@
-import './styles.css'
 import { Link } from 'react-router-dom'
-import Menu from '../../components/MenuPrincipal/menu'
+import Hero from "../../components/Hero"
+import Footer from "../../components/Footer"
 
 function Home() {
   return (
-    <div className='containerHome'>
-      <div className='menuSuperior'>
-        <Menu />
-      </div>
-      <div>
-        <h1>Tela principal</h1>
-      </div>
-    </div>
-
+    <div>
+   <Hero/>
+   <Footer/>
+   </div>
   );
 }
 

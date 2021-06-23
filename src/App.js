@@ -8,9 +8,7 @@ import Creation from './pages/Creation/index'
 import ProductsAdmin from './pages/ProductsAdmin/index'
 import CategoryAdmin from './pages/CategoryAdmin/index'
 import Carrinho from './pages/Carrinho/index'
-
-import './App.css'
-
+import { GlobalStyle } from './styles/GlobalStyles'
 function App() {
  
 
@@ -25,9 +23,9 @@ function App() {
       <Route path='/creation' exact component={Creation} />
       <Route path='/productsAdmin' exact component={ProductsAdmin} />
       <Route path='/categoryAdmin' exact component={CategoryAdmin} />
-      <Route path='/carrinho' exact component={Carrinho} />
-      
+      <Route path='/carrinho' exact component={Carrinho} />     
       </Switch>
+      <GlobalStyle/>
     </BrowserRouter>
   );
 }
