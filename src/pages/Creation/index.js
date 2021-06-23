@@ -17,8 +17,9 @@ function Criacao() {
         <div>
             <Navbar toggle={toggle} />
             <Sidebar isOpen={isOpen} toggle={toggle} />
-            <h1 >Tela Criação</h1>
-            <hr className= 'linha'/>
+            <hr className='linhaSuperior' />
+            <h2 className="telaCriacao" >Tela Criação</h2>
+            <hr className= 'linhaInferior'/>
             <div >
                 <ProductForm />
             </div>

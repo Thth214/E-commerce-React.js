@@ -1,12 +1,11 @@
 .productCard {
   width: 30%;
-  height: 30rem;
   padding: 10px;
   border: 1px solid gray;
   border-radius: 12px;
   margin: auto auto 16px auto;
   word-wrap: break-word;
-  background-color: rgb(211, 210, 210);
+  background-color: white;
 }
 
 .productCard_img {
@@ -27,13 +26,10 @@
   margin-bottom: 10px;
 }
 
-
 .productCard_descricao{
   text-align: center;
-  color: #535a60;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  height: max-content;
+  color: #535a60
   ;
 }
 
