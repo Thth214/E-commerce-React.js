@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import './postForm.css'
@@ -103,16 +102,7 @@ function ProductForm() {
     }
 
 
-    // useEffect(() => {
-    //     fetch(url2,
-    //         {
-    //             method: "GET",
-    //             headers: {
-    //                 'Content-type': 'application/json'
-    //             }
-    //         }).then(response => response.json()).then(response => setCategoria(response))
-    // })
-
+   
     return (
         <div className='containerForm'>
             <div className='divProduto' >

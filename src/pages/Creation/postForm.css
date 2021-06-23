@@ -7,7 +7,7 @@
 
 .divProduto{
     background-color: #081c25;
-    height: 26rem;
+    height: 31rem;
     width: 25rem;
     margin-right: 10rem;
     padding-top: 1rem;
@@ -28,13 +28,13 @@
     display: block;
 }
 
-#nome, #descricao, #valorUnitario, #qtd_estoque, #categoria{
+#nome, #descricao, #valorUnitario, #qtd_estoque, #categoria, #urlImagem{
     width: 25rem;
     height: 2rem;
     margin:0 0 1rem 0;
     padding-left: 0.5rem;
     border-radius: 50px;
-    
+
 }
 .titulos{
     text-align: center;
@@ -67,16 +67,15 @@
 }
 
 @media screen and (max-width: 1147px) {
-    .divProduto, .divCategoria,.criarProduto, .criarCategoria, #nome, #descricao, #valorUnitario, #qtd_estoque, #categoria {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 700px) {
-    .divProduto,  .divCategoria,.criarProduto, .criarCategoria,#nome, #descricao, #valorUnitario, #qtd_estoque,#categoria   {
+    .divProduto, .divCategoria,.criarProduto, .criarCategoria, #urlImagem, #nome, #descricao, #valorUnitario, #qtd_estoque, #categoria {
       width: 100%;
     }
   }
 
+  @media screen and (max-width: 700px) {
+    .divProduto,  .divCategoria,.criarProduto, .criarCategoria,#nome, #urlImagem, #descricao, #valorUnitario, #qtd_estoque,#categoria   {
+      width: 100%;
+    }
+  }
 
 
