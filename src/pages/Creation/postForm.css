@@ -1,0 +1,82 @@
+.containerForm{
+    margin: 3rem 0 5rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divProduto{
+    background-color: #081c25;
+    height: 22rem;
+    width: 25rem;
+    margin-right: 10rem;
+    padding-top: 1rem;
+    border-radius: 5%;
+    margin-bottom: 4rem;
+}
+
+.divCategoria{
+    background-color: #081c25;
+    height: 15rem;
+    width: 25rem;
+    margin-right: 10rem;
+    padding-top: 1rem;
+    border-radius: 5%;
+}
+
+.formProduto{
+    display: block;
+}
+
+#nome, #descricao, #preco, #foto{
+    width: 25rem;
+    height: 2rem;
+    margin:0 0 1rem 0;
+    padding-left: 0.5rem;
+    border-radius: 50px;
+    
+}
+.titulos{
+    text-align: center;
+    color: white;
+}
+
+.criarProduto{
+    width: 25rem;
+    height: 1.5rem ;
+    color: white;
+    background-color: #ff6000;
+    margin-top: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.criarCategoria{
+    width: 25rem;
+    height: 1.5rem ;
+    color: white;
+    background-color: #ff6000;
+    margin-top: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.criarCategoria:hover,.criarProduto:hover{
+    transform: scale(0.95);
+    background-color: #ff904a;
+}
+
+@media screen and (max-width: 1147px) {
+    .divProduto, .divCategoria,.criarProduto, .criarCategoria, #nome, #descricao, #preco, #foto {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .divProduto,  .divCategoria,.criarProduto, .criarCategoria,#nome, #descricao, #preco, #foto   {
+      width: 100%;
+    }
+  }
+
+
+
