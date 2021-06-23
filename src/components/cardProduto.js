@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
 
   function addCarrinho(product) {
     console.log(product)
-  }
+  } 
 
   let formato = { format: "%s%v", symbol: "R$" };
   return (
