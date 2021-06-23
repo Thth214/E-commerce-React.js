@@ -5,8 +5,8 @@ import Card from '../../components/cardProduto'
 import products from "../../components/data";
 import ProductCard from "../../components/cardProduto";
 import ReactPaginate from "react-paginate";
-import Navbar from '../../components/Navbar';
-import Sidebar from '../../components/Sidebar';
+import Navbar from '../../components/NavbarNight';
+import Sidebar from '../../components/SidebarNight';
 
 
 function Products() {

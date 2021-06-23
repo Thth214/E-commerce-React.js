@@ -3,9 +3,6 @@ import React, { useState } from 'react'
 import Axios from 'axios';
 import './postForm.css'
 
-import Axios from 'axios'
-import './postForm.css'
-
 
 function ProductForm() {
 

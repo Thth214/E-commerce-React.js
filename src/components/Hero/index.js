@@ -23,8 +23,8 @@ const Hero = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <HeroContent>
         <HeroItems>
-          <HeroH1>Somente A Maior Qualidade</HeroH1>
-          <HeroP>Cada Produto é unico</HeroP>
+          <HeroH1>A Mais Alta Qualidade</HeroH1>
+          <HeroP>Cada Produto é Unico</HeroP>
           <HeroBtn>Compre Já</HeroBtn>
         </HeroItems>
       </HeroContent>
