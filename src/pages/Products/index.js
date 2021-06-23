@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import './styles.css'
 import { Link } from 'react-router-dom'
-import Menu from '../../components/MenuPrincipal/menu'
 import Card from '../../components/cardProduto'
 import products from "../../components/data";
 import ProductCard from "../../components/cardProduto";
 import ReactPaginate from "react-paginate";
+import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/Sidebar';
 
 
 function Products() {
@@ -29,10 +30,16 @@ function Products() {
 const changePage = ({ selected }) => {
     setPageNumber(selected);
 };
+const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
     return (
-        <div>
-            <Menu />
+        <div>   
+         <Navbar toggle={toggle} />
+            <Sidebar isOpen={isOpen} toggle={toggle} />       
             <h1>Produtos</h1>
             <hr className="linha"/>
             <div className='produtoLista'>
