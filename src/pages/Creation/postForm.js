@@ -14,6 +14,7 @@ function ProductForm() {
         descricao: '',
         qtd_estoque: '',
         valorUnitario:'',
+        urlImagem:'',
         categoria:{
             id:''
         }
@@ -63,6 +64,13 @@ function ProductForm() {
         setProduct(novoProd)
         
     }
+    function handleURLChange(event) {
+        event.preventDefault();
+        const novoProd = { ...product }
+        novoProd.urlImagem = event.target.value
+        setProduct(novoProd)
+        
+    }
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -94,6 +102,7 @@ function ProductForm() {
             })
     }
 
+
     // useEffect(() => {
     //     fetch(url2,
     //         {
@@ -118,6 +127,8 @@ function ProductForm() {
                     <input onChange={(event) => handleEstoqueChange(event)} id='qtd_estoque'  type='text' placeholder='Quantidade estoque'></input>
                     <h3 className='titulos'>Categoria:</h3>
                     <input onChange={(event) => handleIdChange(event)} id='categoria'   type='text' placeholder='Categoria'></input>
+                    <h3 className='titulos'>Imagem:</h3>
+                    <input onChange={(event) => handleURLChange(event)} id='urlImagem'   type='text' placeholder='URl'></input>
                     {/* <select id='categorias'>
                         {
                             categoria.map(result=>{
