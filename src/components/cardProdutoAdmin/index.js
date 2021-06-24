@@ -13,7 +13,10 @@ const ProductCardAdmin = (props) => {
                     </div>
                 </div>
                 <div>
-                    <button className='productCard_button' > Deletar produto</button>
+                    <button onClick={() => props.delete(props.product.id)} className='productCard_button' > Deletar produto</button>
+                </div>
+                <div>
+                    <button className='productCard_button' > Atualizar produto</button>
                 </div>
                 </div>
         </div >
