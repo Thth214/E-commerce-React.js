@@ -19,7 +19,7 @@ function ProductsAdmin() {
     .slice(pagesVisited, pagesVisited + produtosPerPage)
     .map((product) => {
         return (
-            <ProductCard key={product.id} product={product}/>
+            <ProductCard key={product.id} product={product} delete={deleteProduto}/>
         );
     });
 
@@ -32,6 +32,24 @@ function ProductsAdmin() {
         pegar()
     }, [])
 
+    async function deleteProduto(id){
+        await api.delete(`/produtos/${id}`);
+        const produtosFiltrados = produtos.filter(x => x.id !== id);
+        setProdutos(produtosFiltrados);
+    };
+
+    async function updateProduto(id){
+        await api.put(`/produtos/${id}`,{
+        nome:'',
+        descricao:'',
+        valorUnitario:'',
+        qtd_estoque:'',
+        categoria:{
+            id:''
+        },
+        urlImagem:''
+    });
+    }
     
 
     const pageCount = Math.ceil(produtos.length / produtosPerPage);
