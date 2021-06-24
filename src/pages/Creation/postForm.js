@@ -107,14 +107,6 @@ function ProductForm() {
                     <input onChange={(event) => handleIdChange(event)} id='categoria'   type='text' placeholder='Categoria'></input>
                     <h3 className='titulos'>Imagem:</h3>
                     <input onChange={(event) => handleURLChange(event)} id='urlImagem'   type='text' placeholder='URl'></input>
-                    {/* <select id='categorias'>
-                        {
-                            categoria.map(result=>{
-                                return(
-                        <option key={result.key} value={result.key}>{result.nome}</option>
-                            )})}
-                    </select> */}
-                    
                     <button className='criarProduto' type='submit'>Criar produto</button>
                 </form>
             </div>

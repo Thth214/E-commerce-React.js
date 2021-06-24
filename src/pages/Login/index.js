@@ -27,7 +27,7 @@ function Login() {
     return (
     
       <div className='containerLogin'>
-          <h1>Logo</h1> 
+          <h1 className="logo">Logo</h1> 
           
 
           <div className='input_Login'>

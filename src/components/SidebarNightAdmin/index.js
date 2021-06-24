@@ -16,9 +16,9 @@ const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarMenu>
-        <SidebarLink to='/productsAdmin'>Administração</SidebarLink>
+        <SidebarLink to='/productsAdmin'>Administração Produtos</SidebarLink>
+        <SidebarLink to='/categoryAdmin'>Administração Categorias</SidebarLink>
         <SidebarLink to='/creation'>Tela De Criação</SidebarLink>
-        <SidebarLink to='/Home'>Tela Cliente</SidebarLink>
       </SidebarMenu>
       <SideBtnWrap>
         <SidebarRoute to='/'>Sair</SidebarRoute>

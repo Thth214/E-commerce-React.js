@@ -7,8 +7,8 @@
 
 .divProduto{
     background-color: #081c25;
-    height: 31rem;
-    width: 25rem;
+    height: 35rem;
+    width: 35rem;
     margin-right: 10rem;
     padding-top: 1rem;
     border-radius: 5%;
@@ -17,15 +17,26 @@
 
 .divCategoria{
     background-color: #081c25;
-    height: 15rem;
-    width: 25rem;
+    height: 17rem;
+    width: 35rem;
     margin-right: 10rem;
     padding-top: 1rem;
     border-radius: 5%;
 }
 
 .formProduto{
-    display: block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+}
+
+.formCategoria{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 #nome, #descricao, #valorUnitario, #qtd_estoque, #categoria, #urlImagem{
@@ -43,22 +54,24 @@
 
 .criarProduto{
     width: 25rem;
-    height: 1.5rem ;
+    height: 2.5rem ;
     color: white;
     background-color: #ff6000;
     margin-top: 1rem;
     border-radius: 50px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .criarCategoria{
     width: 25rem;
-    height: 1.5rem ;
+    height: 2.5rem ;
     color: white;
     background-color: #ff6000;
     margin-top: 1rem;
     border-radius: 50px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .criarCategoria:hover,.criarProduto:hover{
