@@ -7,9 +7,10 @@
   gap: 12px;
 }
 
-h1{
-  font-size: 3.5rem;
+.titulo{
+    font-size: 5rem;
     color: rgba(255, 255, 255, 0.61); 
+    align-items: center;
 }
 
 .linha {
@@ -33,4 +34,9 @@ h1{
   h1 {
     width: 90%;
   }
+}
+.fundo{
+background:#0a070e;
+
+
 }
