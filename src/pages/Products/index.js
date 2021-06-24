@@ -46,10 +46,10 @@ function Products() {
     };
 
     return (
-        <div>
+        <div className="fundo">
             <Navbar toggle={toggle} />
             <Sidebar isOpen={isOpen} toggle={toggle} />
-            <h1>Produtos</h1>
+            <h1 className="titulo">Produtos</h1>
             <hr className="linha" />
             <div className='produtoLista'>
                 {displayProducts}
