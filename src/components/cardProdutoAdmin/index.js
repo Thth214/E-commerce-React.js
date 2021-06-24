@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
+
 const ProductCardAdmin = (props) => {
+
     return (
         <div className='productCard'>
             <div>
@@ -14,11 +16,9 @@ const ProductCardAdmin = (props) => {
                 </div>
                 <div>
                     <button onClick={() => props.delete(props.product.id)} className='productCard_button' > Deletar produto</button>
-                </div>
-                <div>
-                    <button className='productCard_button' > Atualizar produto</button>
-                </div>
-                </div>
+                </div>  
+
+            </div>
         </div >
     );
 };

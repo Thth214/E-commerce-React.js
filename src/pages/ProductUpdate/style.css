@@ -1,0 +1,113 @@
+.titulo{
+  font-size: 2rem;
+    color: rgb(0, 0, 0); 
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.linhaInferior {
+  border: 0.1px solid #ff6000;
+  margin-left: 18%;
+  width: 64%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.linhaSuperior {
+  border: 0.1px solid #ff6000;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.centralizar{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.tabela{
+    border: #ff6000;
+    margin-top: 3rem;
+    display: block;
+    justify-content: 'center';
+    align-items: 'center';
+}
+
+.fundo{
+  background-color: #ff6200d7;
+  color: rgb(31, 18, 75);
+}
+.fundo2{
+  background-color: #ff6200f3;
+}
+
+.linhaProduto{
+    padding: 0.5rem;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+.linhaTitulo{
+    padding: 1rem;
+    border-radius: 3px;
+    font-size: 2rem;
+}
+
+.inputProduto{
+    height: 1.5rem;
+    width: 12rem ;
+    margin-right: 1rem;
+    
+}
+
+.botaoProduto{
+    height: 2rem;
+    width: 4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ff620000;
+    border: none;
+    
+}
+.botaoProduto:hover{
+  transform: scale(0.95);
+
+}
+
+.atualizar{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.inputAtualizar{
+  height: 2rem;
+  width: 14rem;
+  padding-left: 1rem;
+  margin-right: 1rem;
+
+}
+.botaoAtualizar{
+  height: 2rem;
+  width: 9rem;
+  cursor: pointer;
+  background-color: #ff6000;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.botaoAtualizar:hover{
+transform: scale(0.95);
+
+}
+
+
+body{
+    background-image: url("https://image.freepik.com/vetores-gratis/fragmentos-de-vetor-de-cacos-de-vidro-pedacos-de-vidro-quebrado-isolados-no-branco_168129-12.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    
+}
