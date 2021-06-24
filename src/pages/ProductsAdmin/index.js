@@ -38,18 +38,18 @@ function ProductsAdmin() {
         setProdutos(produtosFiltrados);
     };
 
-    async function updateProduto(id){
-        await api.put(`/produtos/${id}`,{
-        nome:'',
-        descricao:'',
-        valorUnitario:'',
-        qtd_estoque:'',
-        categoria:{
-            id:''
-        },
-        urlImagem:''
-    });
-    }
+    // async function updateProduto(id){
+    //     await api.put(`/produtos/${id}`,{
+    //     nome:'',
+    //     descricao:'',
+    //     valorUnitario:'',
+    //     qtd_estoque:'',
+    //     categoria:{
+    //         id:''
+    //     },
+    //     urlImagem:''
+    // });
+    // }
     
 
     const pageCount = Math.ceil(produtos.length / produtosPerPage);
