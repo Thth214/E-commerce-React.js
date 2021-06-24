@@ -32,6 +32,7 @@ function ProductsAdmin() {
         pegar()
     }, [])
 
+    
 
     const pageCount = Math.ceil(produtos.length / produtosPerPage);
 
