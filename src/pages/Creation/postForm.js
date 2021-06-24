@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Axios from 'axios'
+import api from '../../services/api'
 import './postForm.css'
 
 
 function ProductForm() {
 
-    const url = '/produtos'
-    const url2 = '/categorias'
+   
 
     const [product, setProduct] = useState({
         nome: '',
@@ -74,13 +73,8 @@ function ProductForm() {
     async function handleSubmit(event) {
         event.preventDefault();
         console.log(product)
-        await Axios.post(url, product, {
-            headers: {'Content-Type': 'application/json'}
-        })
-            .then(response => {
-                console.log(response.product)
-            })
-            
+        await api.post('produtos', product, {
+        })  
     }
 
     function handleChange2(event) {
@@ -90,15 +84,9 @@ function ProductForm() {
         console.log(novaCat)
     }
 
-    function handleSubmit2(event) {
+    async function handleSubmit2(event) {
         event.preventDefault();
-        Axios.post(url2, category)
-            .then(response => {
-                console.log(response.category)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+        await api.post(`categorias`, category)
     }
 
 
