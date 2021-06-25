@@ -35,6 +35,7 @@ function ProductUpdate() {
         urlImagem:`${document.getElementById("URLId").value}`
         });
         pegarProduto();
+        alert("Produto Atualizado")
     }
 
     const [isOpen, setIsOpen] = useState(false);

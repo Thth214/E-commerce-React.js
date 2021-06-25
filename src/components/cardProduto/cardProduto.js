@@ -16,12 +16,9 @@ const ProductCard = (props) => {
         <div className='teste'>
           <h5 className='productCard_descricao'>{props.product.descricao}</h5>
           <div className='productCard_preco'>
-            <h3>{props.product.valorUnitario}</h3>
+            <h3>{props.product.valorUnitario}R$</h3>
           </div>
         </div>
-        <button onClick={addItem} className='productCard_button'> 
-          Adicionar ao carrinho
-        </button>
       </div >
     </div >
   )
