@@ -5,11 +5,10 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([])
 
-  function addItem(name, description) {
-    const item = {name, description};
-    setCart([...cart, item])
+  function addItem(produto) {
+    const {nome,valorUnitario,urlImagem,id} = produto
+    setCart([...cart, {nome,valorUnitario,urlImagem,id}])
   }
-
   function removeItem(id) {
     const filteredCart = cart.filter(item => item.id !== id);
     setCart(filteredCart);

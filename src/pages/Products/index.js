@@ -5,13 +5,13 @@ import ReactPaginate from "react-paginate";
 import Navbar from '../../components/NavbarNight';
 import Sidebar from '../../components/SidebarNight';
 import api from '../../services/api'
-import {CartContext} from '../../contexts/CartContext/index'
+import { CartContext } from '../../contexts/CartContext/index'
 
 function Products() {
     const [produtos, setProdutos] = useState([]);
     const [pageNumber, setPageNumber] = useState(0);
 
-    //const {cart, addItem}= useContext(CartContext)
+    const { cart, addItem } = useContext(CartContext)
 
     const produtosPerPage = 18;
     const pagesVisited = pageNumber * produtosPerPage;
@@ -20,9 +20,15 @@ function Products() {
         .slice(pagesVisited, pagesVisited + produtosPerPage)
         .map((product) => {
             return (
-                <ProductCard key={product.id} product={product}/>
+                <div className="productCard" key={product.id}>
+                    <ProductCard  product={product} />
+                    <button onClick={() =>addItem(product)} className='productCard_button'>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
             );
         });
+
 
 
 

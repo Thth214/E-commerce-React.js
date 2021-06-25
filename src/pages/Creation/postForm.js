@@ -89,6 +89,12 @@ function ProductForm() {
         await api.post(`categorias`, category)
     }
 
+   function alert1(){
+       alert("Categoria Criada Com Sucesso");
+   }
+   function alert2(){
+    alert("Produto Criado Com Sucesso");
+}
 
    
     return (
@@ -107,7 +113,7 @@ function ProductForm() {
                     <input onChange={(event) => handleIdChange(event)} id='categoria'   type='text' placeholder='Categoria'></input>
                     <h3 className='titulos'>Imagem:</h3>
                     <input onChange={(event) => handleURLChange(event)} id='urlImagem'   type='text' placeholder='URl'></input>
-                    <button className='criarProduto' type='submit'>Criar produto</button>
+                    <button className='criarProduto'onClick={alert2} type='submit'>Criar produto</button>
                 </form>
             </div>
             <div className='divCategoria'>
@@ -116,7 +122,7 @@ function ProductForm() {
                     <input onChange={(event) => handleChange2(event)} id='nome' value={category.nome} type='text' placeholder='nome'></input>
                     <h3 className='titulos'>Descrição:</h3>
                     <input onChange={(event) => handleChange2(event)} id='descricao' value={category.descricao} type='text' placeholder='descricao'></input>
-                    <button className='criarCategoria' type='submit'>Criar categoria</button>
+                    <button className='criarCategoria'onClick={alert1} type='submit'>Criar categoria</button>
                 </form>
             </div>
 

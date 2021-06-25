@@ -1,15 +1,3 @@
-.productCard2 {
-  width: 30%;
-  height: 30em;
-  padding: 10px;
-  border: 1px solid gray;
-  border-radius: 12px;
-  margin: auto auto 26px auto;
-  word-wrap: break-word;
-  background-color: white;
-}
-
-
 .productCard_img {
   object-fit: cover;
   flex-shrink: 1;

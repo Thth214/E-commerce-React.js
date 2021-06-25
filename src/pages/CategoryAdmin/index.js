@@ -37,6 +37,7 @@ function Category() {
           descricao:`${document.getElementById("descricaoId").value}`
       })  
       pegarCategoria();
+      alert("Categoria Atualizada")
   }
 
     const [isOpen, setIsOpen] = useState(false);
