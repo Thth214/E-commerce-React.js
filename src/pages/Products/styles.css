@@ -1,4 +1,4 @@
-.produtoLista {
+.produtoLista2 {
   display: flex;
   flex-wrap: wrap;
   max-width: 1024px;
@@ -7,16 +7,25 @@
   gap: 12px;
 }
 
-.titulo{
-    font-size: 5rem;
-    color: rgba(255, 255, 255, 0.61); 
-    align-items: center;
+.titulo2{
+  font-size: 2rem;
+    color: rgb(0, 0, 0); 
+    text-align: center;
+    margin-top: 2rem;
 }
 
-.linha {
-  border: 1px solid #ff6000;
+.linhaInferior2 {
+  border: 0.1px solid #ff6000;
   margin-left: 18%;
   width: 64%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.linhaSuperior2 {
+  border: 0.1px solid #ff6000;
+  width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -35,8 +44,6 @@
     width: 90%;
   }
 }
-.fundo{
-background:#a264f3;
 
 
-}
+ 

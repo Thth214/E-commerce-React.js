@@ -85,14 +85,14 @@
 
 .inputAtualizar{
   height: 2rem;
-  width: 14rem;
+  width: 12rem;
   padding-left: 1rem;
   margin-right: 1rem;
 
 }
 .botaoAtualizar{
   height: 2rem;
-  width: 9rem;
+  width: 7rem;
   cursor: pointer;
   background-color: #ff6000;
   color: white;

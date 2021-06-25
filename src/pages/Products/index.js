@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './styles.css'
 import ProductCard from "../../components/cardProduto/cardProduto";
 import ReactPaginate from "react-paginate";
 import Navbar from '../../components/NavbarNight';
 import Sidebar from '../../components/SidebarNight';
 import api from '../../services/api'
-
+import {CartContext} from '../../contexts/CartContext/index'
 
 function Products() {
     const [produtos, setProdutos] = useState([]);
     const [pageNumber, setPageNumber] = useState(0);
+
+    //const {cart, addItem}= useContext(CartContext)
 
     const produtosPerPage = 18;
     const pagesVisited = pageNumber * produtosPerPage;
@@ -18,11 +20,11 @@ function Products() {
         .slice(pagesVisited, pagesVisited + produtosPerPage)
         .map((product) => {
             return (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} product={product}/>
             );
         });
 
-       
+
 
     useEffect(() => {
         async function pegar() {
@@ -46,12 +48,13 @@ function Products() {
     };
 
     return (
-        <div className="fundo">
+        <div >
             <Navbar toggle={toggle} />
             <Sidebar isOpen={isOpen} toggle={toggle} />
-            <h1 className="titulo">Produtos</h1>
-            <hr className="linha" />
-            <div className='produtoLista'>
+            <hr className="linhaSuperior2" />
+            <h1 className="titulo2">Produtos</h1>
+            <hr className="linhaInferior2" />
+            <div className='produtoLista2'>
                 {displayProducts}
                 <ReactPaginate
                     previousLabel={"Previous"}
@@ -65,6 +68,7 @@ function Products() {
                     activeClassName={"paginationActive"}
                 />
             </div>
+
         </div>
     );
 };
