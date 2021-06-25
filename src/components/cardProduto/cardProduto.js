@@ -1,13 +1,15 @@
 
-import React from "react";
+import React,{useContext} from "react";
 import "./cardProduto.css";
+import {CartContext} from '../../contexts/CartContext/index'
 
 
 const ProductCard = (props) => {
 
+  const {cart, addItem}= useContext(CartContext)
 
   return (
-    <div className='productCard'>
+    <div className='productCard2'>
       <div>
         <img className='productCard_img' src={props.product.urlImagem} alt='' />
         <h2 className='productCard_nome'><strong>{props.product.nome}</strong></h2>
@@ -17,9 +19,7 @@ const ProductCard = (props) => {
             <h3>{props.product.valorUnitario}</h3>
           </div>
         </div>
-        <button
-          className='productCard_button'
-        >
+        <button onClick={addItem} className='productCard_button'> 
           Adicionar ao carrinho
         </button>
       </div >
